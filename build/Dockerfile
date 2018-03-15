@@ -1,5 +1,5 @@
 FROM ubuntu
-LABEL author="lazyman"
+LABEL author="kevinqq"
 #用ubuntu国内源替换默认源
 #RUN rm /etc/apt/sources.list
 #COPY sources.list /etc/apt/sources.list
@@ -21,6 +21,6 @@ RUN python3.6 get-pip.py
 #和自带的3.5共存
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
-RUN update-alternatives --config python
+RUN update-alternatives --config python3
 #print()时在控制台正常显示中文
 ENV PYTHONIOENCODING=utf-8
